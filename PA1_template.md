@@ -121,13 +121,6 @@ Create plot:
 
 ```r
 library("ggplot2")
-```
-
-```
-## Warning: package 'ggplot2' was built under R version 3.0.3
-```
-
-```r
 g <- ggplot(avgs, aes(interval, average))
 g + geom_line() + labs(x = "5-minute interval") + labs(y = "Average stesps number") + 
     labs(title = "Average steps for 5  minute interval") + geom_vline(xintercept = 835, 
@@ -421,13 +414,6 @@ head(avgdaytypeord)
 
 ```r
 library(lattice)
-```
-
-```
-## Warning: package 'lattice' was built under R version 3.0.3
-```
-
-```r
 xyplot(avgdaytypeord$avgdaytype ~ avgdaytypeord$interval | avgdaytypeord$daytype, 
     type = "l", layout = c(1, 2), xlab = "Interval", ylab = "Number of steps")
 ```
